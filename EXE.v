@@ -19,7 +19,7 @@ module EXE(jal,aluc,aluimm,pc4,a,b,imm,rn,
     wire [31:0] pc4p4;
     //pc = pc + 4
     assign pc4p4 = pc4 + 4;
-
+    //output ern needs to be determined
     mux2 aluamux(a,imm,shift,alua);
     mux2 alubmux(b,imm,aluimm,alub);
     mux2 aluresmux(alures,pc4p4,jal,ealu);

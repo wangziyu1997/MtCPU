@@ -1,4 +1,5 @@
-module EXE();
+module EXE(jal,aluc,aluimm,pc4,a,b,imm,rn,
+            ealu,ern,eb);
     input jal;
     input [3:0]aluc;
     input aluimm;

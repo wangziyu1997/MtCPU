@@ -7,9 +7,8 @@ module IF(pc1,pc2,pc3,pcnext,pcsource,pcnow,inst);
     input[1:0] pcsource;
     input[31:0] pcnow;
     output [31:0] inst;
-
-    mux4(pc1,pc2,pc3,pc4,pcsource,pcnext);
-    instmem(pcnow,inst);//the name should feed the name of the instruction memory module
+    mux4 pcmux(pc1,pc2,pc3,pc4,pcsource,pcnext);
+    im instmem(pcnow,inst);//the name should feed the name of the instruction memory module
     
     always @(pcnow)
     begin

@@ -1,5 +1,6 @@
 module EXEWB(clk,mwregin,mwreg,mm2regin,mm2reg,
-            mwmem,mwmemin,maluin,malu,mrnin,mrn);
+            mwmem,mwmemin,maluin,malu,mrnin,mrn,
+            di,diin);
     input clk;
     input mwregin;
     output reg mwreg;
@@ -11,6 +12,8 @@ module EXEWB(clk,mwregin,mwreg,mm2regin,mm2reg,
     output reg[31:0] malu;
     input[4:0] mrnin;
     output reg[4:0] mrn;
+    input [31:0] diin;
+    output reg[31:0] di;
 
     initial
     begin
@@ -19,6 +22,7 @@ module EXEWB(clk,mwregin,mwreg,mm2regin,mm2reg,
         mwmem  = 0;
         malu   = 0;
         mrn    = 0;
+        di     = 0;
     end
 
     always @(posedge clk)
@@ -27,6 +31,7 @@ module EXEWB(clk,mwregin,mwreg,mm2regin,mm2reg,
         mm2reg =mm2regin;
         mwmem  =mwmemin;
         malu   =maluin;
-        mrn    =mrnin;   
+        mrn    =mrnin;
+        di     =diin;   
     end
 endmodule

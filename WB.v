@@ -1,3 +1,0 @@
-module WB();
-    
-endmodule

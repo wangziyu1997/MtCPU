@@ -1,2 +1,2 @@
 # MtCPU
-## no README!  
+## A simple cpu in verilog
